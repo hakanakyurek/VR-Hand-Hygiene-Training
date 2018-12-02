@@ -1,14 +1,18 @@
-﻿Shader "LeapMotion/Passthrough/Background" {
+﻿Shader "LeapMotion/Passthrough/Foreground" {
+  Properties {
+  }
+
   SubShader {
-    Tags {"Queue"="Background" "IgnoreProjector"="True"}
+    Tags {"Queue"="Geometry" "IgnoreProjector"="True" "RenderType"="Opaque"}
 
     Cull Off
-    Zwrite Off
+    Zwrite On
     Blend One Zero
 
     Pass{
     CGPROGRAM
-    #include "Assets/LeapMotion/Core/Resources/LeapCG.cginc"
+    #pragma multi_compile LEAP_FORMAT_IR LEAP_FORMAT_RGB
+    #include "Assets/VR-Assets/LeapMotion/Core/Resources/LeapCG.cginc"
     #include "UnityCG.cginc"
     
     #pragma target 3.0
