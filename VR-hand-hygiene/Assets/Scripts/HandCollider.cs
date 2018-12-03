@@ -15,6 +15,7 @@ public class HandCollider : MonoBehaviour {
             {
                 Transform a = notend.GetChild(j);
                 BoxCollider col = a.gameObject.AddComponent<BoxCollider>();
+                col.isTrigger = true;
                 col.size = new Vector3(.02f,.02f,.02f);
                
                 ObiCollider obiCollider = a.gameObject.AddComponent<ObiCollider>();
