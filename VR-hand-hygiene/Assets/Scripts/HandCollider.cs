@@ -5,9 +5,15 @@ using Obi;
 public class HandCollider : MonoBehaviour {
 
     public Transform parent;
-
-	void Start () {
-
+    public ObiSolver solver;
+    public Material mat;
+    public string dessolveReference;
+    private void Awake()
+    {
+        solver.OnCollision += Solver_OnCollision;
+    }
+    void Start () {
+        
         for (int i = 0; i < parent.childCount; i++)
         {
             Transform notend = parent.GetChild(i);
@@ -27,6 +33,12 @@ public class HandCollider : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
+    void Solver_OnCollision(object sender,Obi.ObiSolver.ObiCollisionEventArgs e)
+    {
+        // Performans sıkıntısında saniye başına detection denenebilir. O da olmazsa raycast denenebilir.
+        // Logic going to implemented.
+        Debug.Log("Collusion Detected!");
+    }
 }
