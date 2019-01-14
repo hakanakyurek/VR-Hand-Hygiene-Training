@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: f69bd3616fc8aa449a5ddf57495c9af2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Armature
+    100004: C__Ring_Finger
+    100006: C_Index_Finger
+    100008: C_Little_Finger
+    100010: C_Middle_Finger
+    100012: C_Thumb
+    100014: Cylinder
+    100016: Hand_Base
+    100018: //RootNode
+    100020: Index_Finger
+    100022: Index_Finger_Lower
+    100024: Index_Finger_Middle
+    100026: Index_Finger_Upper
+    100028: Little_Finger
+    100030: Little_Finger_Lower
+    100032: Little_Finger_Middle
+    100034: Little_Finger_Upper
+    100036: Middle_Finger
+    100038: Middle_Finger_Lower
+    100040: Middle_Finger_Middle
+    100042: Middle_Finger_Upper
+    100044: Ring_Finger
+    100046: Ring_Finger_Lower
+    100048: Ring_Finger_Middle
+    100050: Ring_Finger_Upper
+    100052: Thumb_Lower
+    100054: Thumb_Middle
+    100056: Thumb_Upper
+    400000: Arm
+    400002: Armature
+    400004: C__Ring_Finger
+    400006: C_Index_Finger
+    400008: C_Little_Finger
+    400010: C_Middle_Finger
+    400012: C_Thumb
+    400014: Cylinder
+    400016: Hand_Base
+    400018: //RootNode
+    400020: Index_Finger
+    400022: Index_Finger_Lower
+    400024: Index_Finger_Middle
+    400026: Index_Finger_Upper
+    400028: Little_Finger
+    400030: Little_Finger_Lower
+    400032: Little_Finger_Middle
+    400034: Little_Finger_Upper
+    400036: Middle_Finger
+    400038: Middle_Finger_Lower
+    400040: Middle_Finger_Middle
+    400042: Middle_Finger_Upper
+    400044: Ring_Finger
+    400046: Ring_Finger_Lower
+    400048: Ring_Finger_Middle
+    400050: Ring_Finger_Upper
+    400052: Thumb_Lower
+    400054: Thumb_Middle
+    400056: Thumb_Upper
+    2100000: Hand__Normals
+    4300000: Cylinder
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: Cylinder
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
