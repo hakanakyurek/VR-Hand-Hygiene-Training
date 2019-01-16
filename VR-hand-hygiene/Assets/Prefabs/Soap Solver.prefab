@@ -75,10 +75,10 @@ MonoBehaviour:
   parameters:
     mode: 0
     interpolation: 1
-    gravity: {x: 0, y: -0.4, z: -0.04}
+    gravity: {x: 0, y: -0.31, z: 0}
     damping: 0.68
     maxAnisotropy: 1
-    advectionRadius: 1.51
+    advectionRadius: 3.41
     sleepThreshold: 0
   distanceConstraintParameters:
     evaluationOrder: 0
@@ -132,6 +132,6 @@ MonoBehaviour:
     enabled: 0
   densityConstraintParameters:
     evaluationOrder: 0
-    iterations: 1
-    SORFactor: 2
-    enabled: 0
+    iterations: 2
+    SORFactor: 1
+    enabled: 1
