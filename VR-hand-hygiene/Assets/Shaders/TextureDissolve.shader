@@ -3,16 +3,15 @@
 
 Shader "VRShaders/TextureDissolve" {
 	Properties{
-		//_MainTex("Color (RGB) ", 2D) = "white"{}
-		_Color("Color", Color) = (1,1,1,1)
-		_BumpMap("Bumpmap", 2D) = "bump" {}
-		
+		_MainTex("Texture ", 2D) = "white"{}
+		_NormalMap("Normal", 2D) = "bump" {}
 		_StainTex("Stain (RGB)", 2D) = "white" {}
-		_StainTex2("Stain (RGB)", 2D) = "white" {}
-		_StainTex3("Stain (RGB)", 2D) = "white" {}
-		_Fuzziness("_Fuzziness", Range(-5.0, 10.0)) = 0.5
-		_Range("_Range", Range(0.0, 2.0)) = 0.5
-		_DissolveMult("_DissolveSpeed", Range(0.0, 1.0)) =1
+		_SecondStainTex("Second Stain (RGB)", 2D) = "white" {}
+		_Color("Color", Color) = (1,1,1,1)
+		_Dissolve("Dissolve", Range(0.0, 1.0)) = 0.5
+
+
+
 	}
 		SubShader{
 		   Tags { "Queue" = "Transparent" "RenderType" = "Transparent" }
@@ -21,39 +20,44 @@ Shader "VRShaders/TextureDissolve" {
 		  #pragma surface surf Lambert  
 		  struct Input {
 
-			 // float2 uv_MainTex;
+			  float2 uv_MainTex;
 			  float2 uv_StainTex;
-			  float2 uv_StainTex2;
-			  float2 uv_StainTex3;
-			  float2 uv_BumpMap;
-		
+			  float2 uv_SecondStainTex;
+			  float2 _NormalMap;
+
 		  };
 
+	
 
-			//sampler2D _MainTex;
-			sampler2D _BumpMap;
+			sampler2D _MainTex;
+			sampler2D _NormalMap;
 			sampler2D _StainTex;
-			sampler2D _StainTex2;
-			sampler2D _StainTex3;
+			sampler2D _SecondStainTex;
 			fixed4 _Color;
-			float _Fuzziness;
-			float _Range;
-			float _DissolveMult;
+			float _Dissolve;
 
 		  void surf(Input IN, inout SurfaceOutput o) {
-			 
-			  float3 b = tex2D(_StainTex, IN.uv_StainTex).rgb;
-			  float3 c = tex2D(_StainTex2, IN.uv_StainTex2).rgb;
-			  float3 d = tex2D(_StainTex3, IN.uv_StainTex3).rgb;
-			  float Distance = distance(_Color, b*c*d);
-			  float3 Out = lerp(_Color, b*c*d*_Color , saturate((Distance - _Range* _DissolveMult) * max(_Fuzziness, 1e-5f)));
 
-			 
-			  o.Albedo = Out;
-			  o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
-			
+			  float3 main = tex2D(_MainTex, IN.uv_MainTex).rgb;
+
+
+			  float3 stain = tex2D(_StainTex, IN.uv_StainTex).rgb;
+			  float3 stain2 = tex2D(_SecondStainTex, IN.uv_SecondStainTex).rgb;
+
+			  stain = lerp(stain, 1, _Dissolve);
+			  stain2 = lerp(stain2, 1, _Dissolve);
+
+
+			  float3 Out = main * stain*stain2;
+
+			  float3 normal= UnpackNormal(tex2D(_NormalMap, IN._NormalMap));
+			  o.Normal = normalize(normal);
+
+			  o.Albedo = Out * _Color;
+
+
 		  }
 		  ENDCG
-	  }
-		  Fallback "Diffuse"
+		}
+			Fallback "Bumped Diffuse"
 }
