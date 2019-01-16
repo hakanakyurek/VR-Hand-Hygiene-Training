@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LeftHand
+  m_Name: stain_03
   m_Shader: {fileID: 4800000, guid: d8293df8981534342b0fd429cbfeea56, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_ShaderKeywords: _EMISSION _NORMALMAP _PARALLAXMAP _SPECGLOSSMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e01fb76dc0ab31d49b8403ec3dc31430, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5daedc5a8f1008648bcfb5931d482c94, type: 3}
+        m_Texture: {fileID: 2800000, guid: f0cd3fc4aa435b34b9cb03f37772356c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -47,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: cc667b3995f186347b95c15abbb1c3c8, type: 3}
+        m_Texture: {fileID: 2800000, guid: e01fb76dc0ab31d49b8403ec3dc31430, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -55,42 +55,37 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: 46bc3269ad41c374a9c23f22592f2591, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondStainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _StainTex:
-        m_Texture: {fileID: 2800000, guid: b29778f59ab9bc6498a3710bea777740, type: 3}
-        m_Scale: {x: 15.02, y: 10}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: faf5d004d17eec94f9159597aab1b6f1, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _StainTex2:
-        m_Texture: {fileID: 2800000, guid: b29778f59ab9bc6498a3710bea777740, type: 3}
-        m_Scale: {x: 0.1, y: 0.1}
-        m_Offset: {x: -2.44, y: 0}
-    - _StainTex3:
-        m_Texture: {fileID: 2800000, guid: b29778f59ab9bc6498a3710bea777740, type: 3}
+    - _StainTex:
+        m_Texture: {fileID: 2800000, guid: 49fe5c8f20b3b4445a8b985fe350d3cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DissolveMult: 0
+    - _Dissolve: 0
     - _DstBlend: 0
-    - _Fuzziness: 0.57
-    - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.196
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Range: 0
-    - _SmoothnessTextureChannel: 0
+    - _Parallax: 0.0385
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _isLeftHand: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
