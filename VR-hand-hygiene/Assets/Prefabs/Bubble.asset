@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b3b3073315a4191bcde3b6ca445dc7, type: 3}
   m_Name: Bubble
   m_EditorClassIdentifier: 
-  resolution: 41
+  resolution: 41.33
   restDensity: 943.7
   smoothing: 1.5
   viscosity: 0.05
