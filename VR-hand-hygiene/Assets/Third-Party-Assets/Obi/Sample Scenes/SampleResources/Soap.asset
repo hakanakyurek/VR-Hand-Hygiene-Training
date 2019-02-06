@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b3b3073315a4191bcde3b6ca445dc7, type: 3}
   m_Name: Soap
   m_EditorClassIdentifier: 
-  resolution: 217.81
+  resolution: 174.68
   restDensity: 942
   smoothing: 2.4
   viscosity: 1

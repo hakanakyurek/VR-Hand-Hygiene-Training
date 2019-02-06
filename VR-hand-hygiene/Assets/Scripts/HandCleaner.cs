@@ -21,16 +21,16 @@ public class HandCleaner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-		
+
 	}
     private void OnTriggerStay(Collider other)
     {
+        /*
         Debug.Log("hand is in collider, tag: " + other.transform.tag);
         if(waterOn && other.tag=="LeftHand")
         {
             matLeft.SetFloat("_Fuzziness", value);
             Debug.Log("material fuzziness: " + matLeft.GetFloat("_Fuzziness"));
-        }
+        }*/
     }
 }

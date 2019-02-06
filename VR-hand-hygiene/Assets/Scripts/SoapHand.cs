@@ -7,11 +7,11 @@ public class SoapHand : MonoBehaviour {
 
     public Obi.ObiEmitter emitter;
     public Obi.ObiSolver solver;
+    public ParticleSystem particles;
     // Use this for initialization
     void Awake () {
-        transform.GetComponent<ParticleSystem>().Stop();
-        emitter.gameObject.SetActive(false);
-        solver.gameObject.SetActive(false);
+        particles.Stop();
+
     }
 	
 	// Update is called once per frame
@@ -24,13 +24,13 @@ public class SoapHand : MonoBehaviour {
 
         if (other.gameObject.CompareTag("SoapTrigger"))
         {
-            Debug.Log("entered");
+            Debug.Log(gameObject.name + "Entered");
 
             emitter.gameObject.SetActive(true);
             solver.gameObject.SetActive(true);
             emitter.KillAll();
 
-            transform.GetComponent<ParticleSystem>().Play();
+            particles.Play();
 
         }
     }
@@ -39,7 +39,7 @@ public class SoapHand : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("SoapTrigger"))
         {
-            Debug.Log("Exited");
+            Debug.Log(gameObject.name + "Exited");
             emitter.gameObject.SetActive(false);
             solver.gameObject.SetActive(false);
         }
