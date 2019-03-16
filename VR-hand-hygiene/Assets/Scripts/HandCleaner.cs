@@ -5,25 +5,29 @@ using UnityEngine;
 public class HandCleaner : MonoBehaviour {
 
     public GameObject Hand;
-    public Collider Collider;
-    public float Divider = 10000;
-    public Transform PointPalm,PointTo,PointReverse;
-    public float Angle;
-    [SerializeField]
-    private Material Mat;
-    [SerializeField]
-    private Shader Sha;
-    [SerializeField]
-    private float dissolveAmount;
+    public float dissolveDivision = 10000;
+    public Transform PointPalm,PointForwardofHand,PointBackofHand;
+    
+    
+    
+   
+    [Tooltip("Just under the faucet")]
+    public Transform WaterCollisionBound;
+    public float DistancetoWaterCollider = 1;
+
+
     private bool UnderWater;
-    public Transform sink;
-    public float dist = 1;
+    private Material material;
+    private float angle;
+    private float dissolveAmount;
+
+
     private void Start()
     {
-        Mat = Hand.GetComponent<Renderer>().material;
+        material = Hand.GetComponent<Renderer>().material;
 
-        Sha = Mat.shader;
-        Mat.SetFloat("_Dissolve", 0f);
+        //Sha = Mat.shader;
+        material.SetFloat("_Dissolve", 0f);
     }
 
     private void Update()
@@ -31,31 +35,31 @@ public class HandCleaner : MonoBehaviour {
         
         //silneişşr
         if(Input.GetKeyDown(KeyCode.R))
-            Mat.SetFloat("_Dissolve", 0f);
+            material.SetFloat("_Dissolve", 0f);
 
-        Vector3 vec = PointTo.position - PointPalm.position;
+        Vector3 vec = PointForwardofHand.position - PointPalm.position;
         Debug.Log(vec);
-        Angle = Vector3.Angle(vec, Vector3.up);
+        angle = Vector3.Angle(vec, Vector3.up);
 
 
-        dissolveAmount = Mat.GetFloat("_Dissolve");
+        dissolveAmount = material.GetFloat("_Dissolve");
 
-        UnderWater = Vector3.Distance(new Vector3(sink.position.x, 0, sink.position.z), new Vector3(PointPalm.position.x, 0, PointPalm.position.z)) < dist ? true : false;
+        UnderWater = Vector3.Distance(new Vector3(WaterCollisionBound.position.x, 0, WaterCollisionBound.position.z), new Vector3(PointPalm.position.x, 0, PointPalm.position.z)) < DistancetoWaterCollider ? true : false;
 
         if (!UnderWater)
             return;
 
         if (dissolveAmount < 1)
         {
-            if (Angle < 80 && Angle > 7.5f)
+            if (angle < 80 && angle > 7.5f)
             {
-                Mat.SetFloat("_Dissolve", dissolveAmount + ((90 - Angle) / Divider));
+                material.SetFloat("_Dissolve", dissolveAmount + ((90 - angle) / dissolveDivision));
                 Debug.Log("On taraf temizleniyor");
             }
-            if (Angle > 100)
+            if (angle > 100)
             {
                 Debug.Log("Arka taraf temizleniyor");
-                Mat.SetFloat("_Dissolve", dissolveAmount + ((Angle - 90) / Divider));
+                material.SetFloat("_Dissolve", dissolveAmount + ((angle - 90) / dissolveDivision));
             }
 
         }
@@ -67,16 +71,16 @@ public class HandCleaner : MonoBehaviour {
     {
         Gizmos.color = Color.red;
 
-        Gizmos.DrawWireSphere(PointTo.position,.01f);
-        Gizmos.DrawLine(PointPalm.position, PointTo.position);
+        Gizmos.DrawWireSphere(PointForwardofHand.position,.01f);
+        Gizmos.DrawLine(PointPalm.position, PointForwardofHand.position);
 
         Gizmos.color = Color.blue;
 
-        Gizmos.DrawWireSphere(PointReverse.position, .01f);
-        Gizmos.DrawLine(PointPalm.position, PointReverse.position);
+        Gizmos.DrawWireSphere(PointBackofHand.position, .01f);
+        Gizmos.DrawLine(PointPalm.position, PointBackofHand.position);
 
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(sink.position,.05f);
+        Gizmos.DrawWireSphere(WaterCollisionBound.position,.05f);
 
     }
     
