@@ -25,8 +25,8 @@ namespace Valve.VR.InteractionSystem
 
 		public AttachMode attachMode = AttachMode.FixedJoint;
 
-		[EnumFlags]
-		public Hand.AttachmentFlags attachmentFlags = 0;
+        [@EnumFlags]
+        public Hand.AttachmentFlags attachmentFlags = 0;
 
 		private List<Hand> holdingHands = new List<Hand>();
 		private List<Rigidbody> holdingBodies = new List<Rigidbody>();

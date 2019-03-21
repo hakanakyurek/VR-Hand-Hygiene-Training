@@ -41,7 +41,7 @@ namespace Valve.VR.InteractionSystem
 		public bool requireTriggerPressToReturn = false;
 		public bool showTriggerHint = false;
 
-		[EnumFlags]
+		[@EnumFlags]
 		public Hand.AttachmentFlags attachmentFlags = Hand.defaultAttachmentFlags;
 
 		public bool takeBackItem = false; // if a hand enters this trigger and has the item this spawner dispenses at the top of the stack, remove it from the stack
