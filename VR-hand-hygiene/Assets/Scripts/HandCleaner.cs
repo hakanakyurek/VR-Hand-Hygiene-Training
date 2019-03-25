@@ -18,8 +18,7 @@ public class HandCleaner : MonoBehaviour {
 
     private bool UnderWater;
     private Material material;
-    private float angle;
-    private float dissolveAmount;
+    private float dissolveAmount, soapTextureValue, angle;
 
 
     private void Start()
@@ -43,7 +42,7 @@ public class HandCleaner : MonoBehaviour {
 
 
         dissolveAmount = material.GetFloat("_Dissolve");
-
+        soapTextureValue = material.GetFloat("_SoapValue");
         UnderWater = Vector3.Distance(new Vector3(WaterCollisionBound.position.x, 0, WaterCollisionBound.position.z), new Vector3(PointPalm.position.x, 0, PointPalm.position.z)) < DistancetoWaterCollider ? true : false;
 
         if (!UnderWater)
@@ -53,7 +52,9 @@ public class HandCleaner : MonoBehaviour {
         {
             if (angle < 80 && angle > 7.5f)
             {
+              
                 material.SetFloat("_Dissolve", dissolveAmount + ((90 - angle) / dissolveDivision));
+                
                 Debug.Log("On taraf temizleniyor");
             }
             if (angle > 100)
@@ -61,7 +62,9 @@ public class HandCleaner : MonoBehaviour {
                 Debug.Log("Arka taraf temizleniyor");
                 material.SetFloat("_Dissolve", dissolveAmount + ((angle - 90) / dissolveDivision));
             }
-
+            //burası sonradan degısecek el cift taraflı
+            float soap = 1 - material.GetFloat("_Dissolve");
+            material.SetFloat("_SoapValue", soap);
         }
           
 
