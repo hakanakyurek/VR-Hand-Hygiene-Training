@@ -27,6 +27,7 @@ public class HandCleaner : MonoBehaviour {
 
         //Sha = Mat.shader;
         material.SetFloat("_Dissolve", 0f);
+        material.SetFloat("_SoapValue", 1f);
     }
 
     private void Update()
@@ -54,17 +55,16 @@ public class HandCleaner : MonoBehaviour {
             {
               
                 material.SetFloat("_Dissolve", dissolveAmount + ((90 - angle) / dissolveDivision));
-                
+               // material.SetFloat("_SoapValue", soapTextureValue + ((90 - angle) / dissolveDivision));
+
                 Debug.Log("On taraf temizleniyor");
             }
             if (angle > 100)
             {
                 Debug.Log("Arka taraf temizleniyor");
                 material.SetFloat("_Dissolve", dissolveAmount + ((angle - 90) / dissolveDivision));
+                //material.SetFloat("_SoapValue", soapTextureValue + ((angle - 90) / dissolveDivision));
             }
-            //burası sonradan degısecek el cift taraflı
-            float soap = 1 - material.GetFloat("_Dissolve");
-            material.SetFloat("_SoapValue", soap);
         }
           
 

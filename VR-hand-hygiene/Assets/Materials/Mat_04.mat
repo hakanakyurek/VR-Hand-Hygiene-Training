@@ -62,6 +62,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SoapTexture:
+        m_Texture: {fileID: 2800000, guid: fed78c841cfbf3d49b6163b2eeb8fbc2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0.06, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 2800000, guid: faf5d004d17eec94f9159597aab1b6f1, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -70,6 +74,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 5e4f2373b2e5a1e4cb9b27c82f558d6a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _StainTexture:
+        m_Texture: {fileID: 2800000, guid: 5e4f2373b2e5a1e4cb9b27c82f558d6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0.35, y: 0.02}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -82,6 +90,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.0385
+    - _SoapValue: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
