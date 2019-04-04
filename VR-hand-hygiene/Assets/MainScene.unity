@@ -306,7 +306,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8af7a608cd7a5404583f8e476f10b427, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8af7a608cd7a5404583f8e476f10b427, type: 3}
       propertyPath: m_Name
@@ -714,7 +714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94248501da0f34790b074bbaf0b09150, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94248501da0f34790b074bbaf0b09150, type: 3}
       propertyPath: m_LocalScale.x
@@ -5033,11 +5033,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hand: {fileID: 1057202804}
   dissolveDivision: 10000
-  PointPalm: {fileID: 1852771647}
-  PointForwardofHand: {fileID: 974252246}
-  PointBackofHand: {fileID: 1957960702}
-  WaterCollisionBound: {fileID: 1770489196}
-  DistancetoWaterCollider: 1
+  PointPalm: {fileID: 974252246}
+  PointForwardofHand: {fileID: 1957960702}
+  PointBackofHand: {fileID: 1770489196}
+  WaterCollisionBound: {fileID: 2105905238}
+  DistancetoWaterCollider: 0.25
 --- !u!114 &378733073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5051,11 +5051,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hand: {fileID: 1839315310}
   dissolveDivision: 10000
-  PointPalm: {fileID: 1826081895}
-  PointForwardofHand: {fileID: 1906283168}
-  PointBackofHand: {fileID: 266126911}
-  WaterCollisionBound: {fileID: 1597021798}
-  DistancetoWaterCollider: 1
+  PointPalm: {fileID: 1906283168}
+  PointForwardofHand: {fileID: 266126911}
+  PointBackofHand: {fileID: 1597021798}
+  WaterCollisionBound: {fileID: 2105905238}
+  DistancetoWaterCollider: 0.25
 --- !u!4 &378733074
 Transform:
   m_ObjectHideFlags: 0
@@ -5493,7 +5493,6 @@ GameObject:
   - component: {fileID: 523880550}
   - component: {fileID: 523880552}
   - component: {fileID: 523880553}
-  - component: {fileID: 523880551}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Sink
@@ -5514,24 +5513,6 @@ Transform:
   m_Father: {fileID: 33697659}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &523880551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 523880549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f84cec91ef3703f488bcda3505d9606b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hand: {fileID: 0}
-  dissolveDivision: 10000
-  PointPalm: {fileID: 0}
-  PointForwardofHand: {fileID: 0}
-  PointBackofHand: {fileID: 0}
-  WaterCollisionBound: {fileID: 0}
-  DistancetoWaterCollider: 1
 --- !u!65 &523880552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5619,7 +5600,7 @@ Transform:
   - {fileID: 740024802}
   - {fileID: 1145037112}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556188584
 GameObject:

@@ -13,6 +13,7 @@ public class HandCleaner : MonoBehaviour {
    
     [Tooltip("Just under the faucet")]
     public Transform WaterCollisionBound;
+    // Kalibrasyondan sonra bu floatın tekrar ayarlanması gerekiyor.
     public float DistancetoWaterCollider = 1;
 
 
@@ -33,19 +34,17 @@ public class HandCleaner : MonoBehaviour {
     private void Update()
     {
         
-        //silneişşr
         if(Input.GetKeyDown(KeyCode.R))
             material.SetFloat("_Dissolve", 0f);
 
         Vector3 vec = PointForwardofHand.position - PointPalm.position;
-        Debug.Log(vec);
         angle = Vector3.Angle(vec, Vector3.up);
 
 
         dissolveAmount = material.GetFloat("_Dissolve");
         soapTextureValue = material.GetFloat("_SoapValue");
+       
         UnderWater = Vector3.Distance(new Vector3(WaterCollisionBound.position.x, 0, WaterCollisionBound.position.z), new Vector3(PointPalm.position.x, 0, PointPalm.position.z)) < DistancetoWaterCollider ? true : false;
-
         if (!UnderWater)
             return;
 
