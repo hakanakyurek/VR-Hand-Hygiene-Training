@@ -58,5 +58,5 @@ Shader "VRShaders/TextureDissolve" {
 		  }
 		  ENDCG
 		}
-			Fallback "Bumped Diffuse"
+			Fallback "Diffuse"
 }
