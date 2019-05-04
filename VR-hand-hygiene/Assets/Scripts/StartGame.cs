@@ -14,26 +14,28 @@ public class StartGame : MonoBehaviour {
 
     void Awake()
     {
-        this.StartTheGame(false);
+        waterSolver.gameObject.SetActive(false);
+        waterEmitter.gameObject.SetActive(false);
+
     }
 
     void Start () {
 
-
+        soapOpen = false;
     }
 
     // Update is called once per frame
     void Update () {
         if (Input.GetKeyDown("space"))
         {
-            this.StartTheGame(true);
+            this.StartTheGame();
         }
     }
 
-    void StartTheGame(bool state)
+    void StartTheGame()
     {
-        waterEmitter.gameObject.SetActive(state);
-        waterSolver.gameObject.SetActive(state);
-        soapOpen = state;
+        waterSolver.gameObject.SetActive(true);
+        waterEmitter.gameObject.SetActive(true);
+        soapOpen = true;
     }
 }

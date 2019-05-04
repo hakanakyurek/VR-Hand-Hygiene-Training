@@ -16,7 +16,6 @@ public class ChangeObjective : MonoBehaviour {
 	void Start () {
 
         this.currentObjectiveIndex = -1;
-        ChangeTheObjective();
 	}
 	
 	// Update is called once per frame
