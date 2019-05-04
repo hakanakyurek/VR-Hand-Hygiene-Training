@@ -24,7 +24,8 @@ public class ChangeObjective : MonoBehaviour {
     {
 		if(Input.GetKeyDown("space"))
         {
-            this.ChangeTheObjective();
+            if (this.currentObjectiveIndex < this.objectiveList.Length - 1)
+                this.ChangeTheObjective();
         }
 
 	}

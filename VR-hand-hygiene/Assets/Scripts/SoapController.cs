@@ -6,6 +6,8 @@ public class SoapController : MonoBehaviour {
 
     public Obi.ObiEmitter emitter;
     public Obi.ObiSolver solver;
+    public bool open;
+
     private void Awake()
     {
         emitter.gameObject.SetActive(false);
