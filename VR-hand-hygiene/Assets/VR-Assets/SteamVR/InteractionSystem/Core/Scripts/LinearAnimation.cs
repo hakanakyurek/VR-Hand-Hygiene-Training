@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Animation that moves based on a linear mapping
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem
@@ -55,7 +49,7 @@ namespace Valve.VR.InteractionSystem
 			//No need to set the anim if our value hasn't changed.
 			if ( value != lastValue )
 			{
-				animState.time = value * animLength;
+				animState.time = value / animLength;
 			}
 
 			lastValue = value;

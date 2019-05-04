@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Triggers haptic pulses based on distance between 2 positions
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem
@@ -25,13 +19,11 @@ namespace Valve.VR.InteractionSystem
 			{
 				float distance = Vector3.Distance( firstTransform.position, secondTransform.position );
 
-                Hand hand = GetComponentInParent<Hand>();
-                if (hand != null)
-                { 
+				SteamVR_TrackedObject trackedObject = GetComponentInParent<SteamVR_TrackedObject>();
+				if ( trackedObject )
+				{
 					float pulse = distanceIntensityCurve.Evaluate( distance );
-                    hand.TriggerHapticPulse((ushort)pulse);
-
-                    //SteamVR_Controller.Input( (int)trackedObject.index ).TriggerHapticPulse( (ushort)pulse );
+					SteamVR_Controller.Input( (int)trackedObject.index ).TriggerHapticPulse( (ushort)pulse );
 				}
 
 				float nextPulse = pulseIntervalCurve.Evaluate( distance );

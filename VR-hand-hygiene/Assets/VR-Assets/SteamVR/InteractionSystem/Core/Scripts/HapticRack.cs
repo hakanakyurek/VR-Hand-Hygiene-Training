@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Triggers haptic pulses based on a linear mapping
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 
@@ -71,10 +65,10 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private void Pulse()
 		{
-			if ( hand && (hand.isActive) && ( hand.GetBestGrabbingType() != GrabTypes.None ) )
+			if ( hand && ( hand.controller != null ) && ( hand.GetStandardInteractionButton() ) )
 			{
 				ushort duration = (ushort)Random.Range( minimumPulseDuration, maximumPulseDuration + 1 );
-				hand.TriggerHapticPulse( duration );
+				hand.controller.TriggerHapticPulse( duration );
 
 				onPulse.Invoke();
 			}

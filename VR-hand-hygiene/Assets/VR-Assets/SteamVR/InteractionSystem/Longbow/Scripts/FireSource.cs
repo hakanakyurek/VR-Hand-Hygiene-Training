@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: This object can be set on fire
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem
@@ -78,7 +72,7 @@ namespace Valve.VR.InteractionSystem
 
 			if ( hand = GetComponentInParent<Hand>() )
 			{
-				hand.TriggerHapticPulse( 1000 );
+				hand.controller.TriggerHapticPulse( 1000 );
 			}
 		}
 
