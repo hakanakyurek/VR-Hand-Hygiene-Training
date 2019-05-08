@@ -42,7 +42,7 @@ Shader "VRShaders/TextureDissolve" {
 
 
 			  float3 stain = tex2D(_StainTexture, IN.uv_StainTexture).rgb;
-			  float3 soap = tex2D(_SoapTexture, IN.uv_SoapTexture).rgb;
+			  float4 soap = tex2D(_SoapTexture, IN.uv_SoapTexture).rgba;
 
 			  stain = lerp(stain, 1, _Dissolve);
 			  soap = lerp(soap, 1, _SoapValue);
