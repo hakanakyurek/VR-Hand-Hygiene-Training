@@ -38,16 +38,16 @@ Shader "VRShaders/TextureDissolve" {
 			float _SoapValue;
 		  void surf(Input IN, inout SurfaceOutput o) {
 
-			  float3 main = tex2D(_MainTex, IN.uv_MainTex).rgb;
+			  float4 main = tex2D(_MainTex, IN.uv_MainTex).rgba;
 
 
-			  float3 stain = tex2D(_StainTexture, IN.uv_StainTexture).rgb;
+			  float4 stain = tex2D(_StainTexture, IN.uv_StainTexture).rgba;
 			  float4 soap = tex2D(_SoapTexture, IN.uv_SoapTexture).rgba;
 
 			  stain = lerp(stain, 1, _Dissolve);
 			  soap = lerp(soap, 1, _SoapValue);
 
-			  float3 Out = main * stain*soap;
+			  float4 Out = main * stain*soap;
 			 
 			  float3 normal= UnpackNormal(tex2D(_NormalMap, IN.uv_NormalMap));
 			  o.Normal = normalize(normal);

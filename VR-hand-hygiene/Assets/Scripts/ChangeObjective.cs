@@ -44,6 +44,7 @@ public class ChangeObjective : MonoBehaviour {
 [System.Serializable]
 public class Objective
 {
+
     public string obj_text;
     public VideoClip clp;
 }
