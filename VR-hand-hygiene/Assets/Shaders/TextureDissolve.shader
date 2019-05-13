@@ -8,6 +8,7 @@ Shader "VRShaders/TextureDissolve" {
 		_StainTexture("Stain (RGB)", 2D) = "white" {}
 		_SoapTexture("Soap Texture (RGB)", 2D) = "white" {}
 		_Color("Color", Color) = (1,1,1,1)
+		_SoapColor("Soap Color", Color) = (1,1,1,1)
 		_Dissolve("Dissolve", Range(0.0, 1.0)) = 0.5
 		_SoapValue("Soap Value", Range(0.0, 1.0)) = 0.5
 
@@ -34,6 +35,7 @@ Shader "VRShaders/TextureDissolve" {
 			sampler2D _StainTexture;
 			sampler2D _SoapTexture;
 			fixed4 _Color;
+			fixed4 _SoapColor;
 			float _Dissolve;
 			float _SoapValue;
 		  void surf(Input IN, inout SurfaceOutput o) {
