@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Helper to display various hmd stats via GUIText
+//
+//=============================================================================
+
+using UnityEngine;
 
 #if UNITY_2017_2_OR_NEWER
 

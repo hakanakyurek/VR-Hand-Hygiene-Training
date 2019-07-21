@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Handles the spawning and returning of the ItemPackage
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
