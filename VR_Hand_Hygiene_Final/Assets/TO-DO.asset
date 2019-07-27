@@ -22,7 +22,14 @@ MonoBehaviour:
 
     4-Make UI and set appropriate position for objective text
 
-    5-Add all necessary files.
+    5-Add all necessary files.-------------------------------------DONE
 
+    6-Bake Light
 
-'
+    7-Add ambient sound(like birds and stuff)
+
+    8-Add scene transtition at the beginning(Black to fade the scene)
+
+    9-Add settings menu, like turn off sound or maybe light settings.
+
+    10-Add anti aliasing'

@@ -10,7 +10,7 @@ public class ChangeObjective : MonoBehaviour {
     private bool[] objectiveCheckList;
     public TextMeshProUGUI textField;
     public VideoPlayer video_player;
-
+    public bool loop = false;
 
     private int currentObjectiveIndex;
     
@@ -20,7 +20,8 @@ public class ChangeObjective : MonoBehaviour {
 
         this.currentObjectiveIndex = -1;
         objectiveCheckList = new bool[objectiveList.Count];
-
+        video_player.isLooping = this.loop;
+        video_player.playOnAwake = false;
     }
 	
 	// Update is called once per frame
@@ -47,7 +48,7 @@ public class ChangeObjective : MonoBehaviour {
 public class Objective
 {
     [TextArea(2,5), SerializeField] private string obj_text;
-    private VideoClip clp;
+    [SerializeField] private VideoClip clp;
 
     public string GetObjectiveText()
     {
