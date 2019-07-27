@@ -37,16 +37,25 @@ public class ChangeObjective : MonoBehaviour {
     private void ChangeTheObjective()
     {
         this.currentObjectiveIndex++;
-        textField.SetText(objectiveList[currentObjectiveIndex].obj_text);
+        textField.SetText((currentObjectiveIndex+1).ToString()+"-"+objectiveList[currentObjectiveIndex].GetObjectiveText());
         this.objectiveCheckList[currentObjectiveIndex] = true;
-        video_player.clip = objectiveList[currentObjectiveIndex].clp;
+        video_player.clip = objectiveList[currentObjectiveIndex].GetClip();
         video_player.Play();
     }
 }
 [System.Serializable]
 public class Objective
 {
-    [TextArea(2,5)]
-    public string obj_text;
-    public VideoClip clp;
+    [TextArea(2,5), SerializeField] private string obj_text;
+    private VideoClip clp;
+
+    public string GetObjectiveText()
+    {
+        return obj_text;
+    }
+    public VideoClip GetClip()
+    {
+        return clp;
+    }
+
 }
