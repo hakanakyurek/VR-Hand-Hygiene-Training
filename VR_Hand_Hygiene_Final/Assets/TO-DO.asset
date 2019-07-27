@@ -24,7 +24,7 @@ MonoBehaviour:
 
     5-Add all necessary files.-------------------------------------DONE
 
-    6-Bake Light
+    6-Bake Light--------------DONE
 
     7-Add ambient sound(like birds and stuff)
 
@@ -33,4 +33,6 @@ MonoBehaviour:
 
     9-Add settings menu, like turn off sound or maybe light settings.
 
-    10-Add anti aliasing'
+    10-Add anti aliasing-------------DONE
+
+    11-Calibrate gloves-------------DONE'
