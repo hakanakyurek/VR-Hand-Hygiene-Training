@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: 'TODO LIST
 
-    1-Cut and Add videos DONE
+    1-Cut and Add videos-----------------------------------------DONE
 
     2-Redo water(Faucet works!!)
 
     3-Control hand again.
 
-    4-Make UI
+    4-Make UI and set appropriate position for objective text
 
     5-Add all necessary files.
 
