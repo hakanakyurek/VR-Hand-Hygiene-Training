@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.384
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.048889883, g: 0.051512685, b: 0.04649428, a: 0.384}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.384}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7868,36 +7868,32 @@ MonoBehaviour:
   - obj_text: "Su ile ellerini \u0131slat"
     clp: {fileID: 32900000, guid: 47cabf6124d924f4db6fc44843eb445c, type: 3}
   - obj_text: "T\xFCm el y\xFCzeylerini kaplayacak kadar sabun uygula"
-    clp: {fileID: 32900000, guid: f65d4ccab05bfe7458a79972f0ff54a6, type: 3}
+    clp: {fileID: 32900000, guid: eb49851ab260e964388f071c097c8ef1, type: 3}
   - obj_text: "Avu\xE7 i\xE7lerini ovala"
-    clp: {fileID: 32900000, guid: 563b44dc261e7fb4fbdeee8d9676e253, type: 3}
+    clp: {fileID: 32900000, guid: d3653a58c1807c34bac613803fc487b3, type: 3}
   - obj_text: "Sa\u011F avu\xE7 i\xE7i ile sol s\u0131rt parmak aralar\u0131n\u0131
       ovu\u015Ftur"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
+    clp: {fileID: 32900000, guid: 4ca9ea4d1d35efa4ab0390e03c77183b, type: 3}
   - obj_text: "Sol avu\xE7 i\xE7i ile sa\u011F s\u0131rt parmak aralar\u0131n\u0131
       ovu\u015Ftur"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
+    clp: {fileID: 32900000, guid: f5772cfbb4b5e30418e60a78f22fa38f, type: 3}
   - obj_text: "Parmak aralar\u0131n\u0131 avu\xE7 i\xE7i taraf\u0131nda ovu\u015Ftur"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
-  - obj_text: "Parmaklar\u0131n tersi ile kar\u015F\u0131 avu\xE7 i\xE7ini ovu\u015Ftur"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
+    clp: {fileID: 32900000, guid: 81edcd86fe518824c91469b14752d9e1, type: 3}
   - obj_text: "Sa\u011F avu\xE7 i\xE7iyle sol ba\u015F parma\u011F\u0131n\u0131 ov"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
-  - obj_text: "Sol avu\xE7 i\xE7iyle sa\u011F ba\u015F parma\u011F\u0131n\u0131 ov"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
-  - obj_text: "Sol avu\xE7 i\xE7ini sa\u011F elin parmak u\xE7lar\u0131yla geriye
+    clp: {fileID: 32900000, guid: 6e815e8d08b0f6e45b85c950b5870bac, type: 3}
+  - obj_text: "Sol avu\xE7 i\xE7inde sa\u011F elin parmak u\xE7lar\u0131yla geriye
       ve ileriye ovala"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
-  - obj_text: "Sa\u011F avu\xE7 i\xE7ini sol elin parmak u\xE7lar\u0131yla geriye
+    clp: {fileID: 32900000, guid: 54d05d7e8a79cf544b8e910b6200ff35, type: 3}
+  - obj_text: "Sa\u011F avu\xE7 i\xE7inde sol elin parmak u\xE7lar\u0131yla geriye
       ve ileriye ovala"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
+    clp: {fileID: 32900000, guid: 4fa948b9e713e184890183a2f00413fc, type: 3}
   - obj_text: Ellerini suyla durula
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
+    clp: {fileID: 32900000, guid: 9c8b01c581633c84fbf801f47c6b3324, type: 3}
   - obj_text: "Tek kullan\u0131ml\u0131k havlu ile ellerini iyice kurula"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
-  - obj_text: "Musluk kapatmak i\xE7in tek kullan\u0131ml\u0131k ka\u011F\u0131t havlu
-      kullan"
-    clp: {fileID: 32900000, guid: e6c648913ab668f41a6cfd0ed38db2d2, type: 3}
+    clp: {fileID: 32900000, guid: 986967ee050025c49833ab14f9afc480, type: 3}
+  - obj_text: "Muslu\u011Fu kapatmak i\xE7in tek kullan\u0131ml\u0131k ka\u011F\u0131t
+      havlu kullan"
+    clp: {fileID: 32900000, guid: 22eeaec29766c504da4fbef688574ccc, type: 3}
   textField: {fileID: 1650664811}
   video_player: {fileID: 1874778740}
 --- !u!1 &1305003708
@@ -8144,7 +8140,6 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -8171,10 +8166,11 @@ MonoBehaviour:
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -1.0426025}
   m_textInfo:
     textComponent: {fileID: 1650664811}
     characterCount: 8
@@ -8185,12 +8181,9 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
