@@ -398,13 +398,22 @@ namespace Obi{
 			bool emitted = false;
 			bool killed = false;
 
-			// cache a per-shape matrix that transforms from shape local space to solver space.
-			for (int j = 0; j < emitterShapes.Count; ++j){
-				emitterShapes[j].UpdateLocalToSolverMatrix();
-			}
+            // cache a per-shape matrix that transforms from shape local space to solver space.
 
-			// Update lifetime and kill dead particles:
-			for (int i = activeParticleCount-1; i >= 0; --i){
+            try
+            {
+                for (int j = 0; j < emitterShapes.Count; ++j)
+                {
+                    emitterShapes[j].UpdateLocalToSolverMatrix();
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                Debug.Log(e.Message);
+            }
+
+            // Update lifetime and kill dead particles:
+            for (int i = activeParticleCount-1; i >= 0; --i){
 				life[i] -= Time.deltaTime;
 
 				if (life[i] <= 0){
