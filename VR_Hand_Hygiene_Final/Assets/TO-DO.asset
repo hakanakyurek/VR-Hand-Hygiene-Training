@@ -30,10 +30,14 @@ MonoBehaviour:
     out 3D sounds.
 
     8-Add scene transtition at the beginning(Black to fade the scene,use steam vr
-    load level)->>Almost done, adjust settings
+    load level)->>Almost done, adjust settings -----------DONE
 
     9-Add settings menu, like turn off sound or maybe light settings.
 
     10-Add anti aliasing-------------DONE
 
-    11-Calibrate gloves-------------DONE'
+    11-Calibrate gloves-------------DONE
+
+    12-Add interactable button
+
+    13-Add Reset'
