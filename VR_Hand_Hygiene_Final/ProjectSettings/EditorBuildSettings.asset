@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/steamVRLoadLevel.unity
-    guid: 2ca803a57f1038a418701e1ac79f60d5
-  - enabled: 1
     path: Assets/Scenes/Main_Scene.unity
     guid: 35e2b22180401c247bc6f3e9aa7da980
   m_configObjects: {}

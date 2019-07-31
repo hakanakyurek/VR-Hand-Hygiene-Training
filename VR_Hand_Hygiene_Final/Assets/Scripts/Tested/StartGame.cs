@@ -15,7 +15,6 @@ public class StartGame : MonoBehaviour {
     {
         waterSolver.gameObject.SetActive(false);
         waterEmitter.gameObject.SetActive(false);
-        waterEmitter.selfCollisions = true;
 
     }
 

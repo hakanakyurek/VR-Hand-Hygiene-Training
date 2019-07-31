@@ -43,7 +43,7 @@ public abstract class ObiActor : MonoBehaviour, IObiSolverClient
 	[SerializeField] protected ObiCollisionMaterial collisionMaterial;
 
 	[SerializeProperty("SelfCollisions")]
-	[SerializeField] public bool selfCollisions = false;
+	[SerializeField] protected bool selfCollisions = false;
 
 	[HideInInspector][NonSerialized] public int[] particleIndices;					/**< indices of allocated particles in the solver.*/
 
