@@ -11,7 +11,7 @@ public class ChangeObjective : MonoBehaviour {
     public TextMeshProUGUI textField;
     public VideoPlayer video_player;
     public bool loop = false;
-
+    [SerializeField] private KeyCode resetKey = KeyCode.R;
     private int currentObjectiveIndex;
     
 
@@ -33,12 +33,24 @@ public class ChangeObjective : MonoBehaviour {
                 ChangeTheObjective();
         }
 
-	}
+        if (Input.GetKeyDown(resetKey))
+            ResetObjectives();
+
+    }
 
     private void ChangeTheObjective()
     {
         this.currentObjectiveIndex++;
         textField.SetText((currentObjectiveIndex+1).ToString()+"-"+objectiveList[currentObjectiveIndex].GetObjectiveText());
+        this.objectiveCheckList[currentObjectiveIndex] = true;
+        video_player.clip = objectiveList[currentObjectiveIndex].GetClip();
+        video_player.Play();
+    }
+
+    private void ResetObjectives()
+    {
+        this.currentObjectiveIndex=0;
+        textField.SetText((currentObjectiveIndex + 1).ToString() + "-" + objectiveList[currentObjectiveIndex].GetObjectiveText());
         this.objectiveCheckList[currentObjectiveIndex] = true;
         video_player.clip = objectiveList[currentObjectiveIndex].GetClip();
         video_player.Play();

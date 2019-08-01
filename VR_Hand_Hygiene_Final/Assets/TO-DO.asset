@@ -20,5 +20,5 @@ MonoBehaviour:
     3D sounds.\n8-Add scene transtition at the beginning(Black to fade the scene,use
     steam vr load level)->>Almost done, adjust settings -----------DONE\n9-Add settings
     menu, like turn off sound or maybe light settings.\n10-Add anti aliasing-------------DONE\n11-Calibrate
-    gloves-------------DONE\n12-Add interactable button\n13-Add Reset\n14-Fix Thumb
-    rotations.\n\n\nAcil: Suyu d\xFCzenle ve etkile\u015Fimi test et."
+    gloves-------------DONE\n12-Add interactable button\n13-Add Reset------------------------------------------------DONE\n14-Fix
+    Thumb rotations.\n\n\nAcil: Suyu d\xFCzenle ve etkile\u015Fimi test et."
