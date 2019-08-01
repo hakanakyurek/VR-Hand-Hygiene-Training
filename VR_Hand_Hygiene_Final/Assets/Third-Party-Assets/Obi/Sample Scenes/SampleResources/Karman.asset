@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,11 +13,11 @@ MonoBehaviour:
   m_Name: Karman
   m_EditorClassIdentifier: 
   resolution: 3.5
-  restDensity: 100
+  restDensity: 131.5
   smoothing: 2
   viscosity: 0
-  surfaceTension: 0
-  buoyancy: 0
-  atmosphericDrag: 0
-  atmosphericPressure: 0
-  vorticity: 0
+  surfaceTension: 1.7
+  buoyancy: -1.71
+  atmosphericDrag: 0.54
+  atmosphericPressure: 0.39
+  vorticity: 1.35

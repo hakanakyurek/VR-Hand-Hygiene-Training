@@ -6,7 +6,7 @@ public class StainController : MonoBehaviour
 {
 
     [SerializeField] private SkinnedMeshRenderer rend;
-    [SerializeField] private bool waterOn=false;
+    private bool waterOn=false;
 
     public float speed = .5F;
     public bool change_soap=true, change_stain=true;
@@ -35,6 +35,13 @@ public class StainController : MonoBehaviour
             val = 0;
         if (waterOn)
             val += Time.deltaTime * speed;
+        if (Input.GetKeyDown(KeyCode.A))
+            waterOn = true;
+    }
+
+    public void WaterOn()
+    {
+        waterOn = true;
     }
 }
 

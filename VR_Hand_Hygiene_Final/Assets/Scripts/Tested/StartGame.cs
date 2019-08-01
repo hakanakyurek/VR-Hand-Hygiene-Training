@@ -8,7 +8,7 @@ public class StartGame : MonoBehaviour {
 
     public Obi.ObiEmitter waterEmitter;
     public Obi.ObiSolver waterSolver;
-    private bool soapOpen;
+    public bool waterOpen;
     // Use this for initialization
 
     void Awake()
@@ -21,7 +21,7 @@ public class StartGame : MonoBehaviour {
 
     void Start () {
 
-        soapOpen = false;
+        waterOpen = false;
     }
 
     // Update is called once per frame
@@ -37,6 +37,6 @@ public class StartGame : MonoBehaviour {
 
         waterSolver.gameObject.SetActive(true);
         waterEmitter.gameObject.SetActive(true);
-        soapOpen = true;
+        waterOpen = true;
     }
 }
