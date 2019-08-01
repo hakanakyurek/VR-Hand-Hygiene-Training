@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: "TODO LIST\n1-Cut and Add videos-----------------------------------------DONE\n2-Redo
     water(Faucet works!!)------------------------------ -DONE\n3-Control hand again.-----------------------------------------DONE\n4-Make
-    UI and set appropriate position for objective text\n5-Add all necessary files.-------------------------------------DONE\n6-Bake
-    Light--------------DONE\n7-Add ambient sound(like birds and stuff)-- Almost done,
-    add water sound and try out 3D sounds.\n8-Add scene transtition at the beginning(Black
-    to fade the scene,use steam vr load level)->>Almost done, adjust settings -----------DONE\n9-Add
-    settings menu, like turn off sound or maybe light settings.\n10-Add anti aliasing-------------DONE\n11-Calibrate
+    UI and set appropriate position for objective text------DONE\n5-Add all necessary
+    files.-------------------------------------DONE\n6-Bake Light--------------DONE\n7-Add
+    ambient sound(like birds and stuff)-- Almost done, add water sound and try out
+    3D sounds.\n8-Add scene transtition at the beginning(Black to fade the scene,use
+    steam vr load level)->>Almost done, adjust settings -----------DONE\n9-Add settings
+    menu, like turn off sound or maybe light settings.\n10-Add anti aliasing-------------DONE\n11-Calibrate
     gloves-------------DONE\n12-Add interactable button\n13-Add Reset\n14-Fix Thumb
     rotations.\n\n\nAcil: Suyu d\xFCzenle ve etkile\u015Fimi test et."
